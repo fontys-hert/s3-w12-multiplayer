@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "OldSchoolAdventures"; /* The name you want to give to your font */
+  src: url("/public/fonts/old-school-adventures.woff") format("woff"); /* WOFF font file */
+}
+
+* {
+  font-family: OldSchoolAdventures, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+#root {
+  width: 100%;
+}
+
+.battlefield {
+  background-image: url("/public/images/battlefield.png.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Optionally, you can set a background color as a fallback */
+  background-color: #f0f0f0;
+  /* Add other styles to your document content */
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.battlefield__section {
+  flex: 0 0 50%;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.battlefield__section--align-right {
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.pokemon {
+  display: flex;
+  justify-content: center;
+}
+
+.pokemon--align-end {
+  align-self: center;
+}
+
+.pokemon__image {
+  width: 10vw;
+  height: 20vh;
+}
+
+.pokemon__status {
+  background-color: #f7f3d0;
+  border: 5px solid black;
+  padding-block: 1vh;
+  padding-inline: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.status__name {
+  font-size: 1vw;
+  text-transform: uppercase;
+}
+
+.status__health-bar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.health-bar__backdrop {
+  background-color: black;
+  height: 1vh;
+  border-radius: 0.5rem;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.health-bar__current-health {
+  height: 0.8vh;
+  background-color: #95d8a8;
+}
+
+.status__health {
+  font-size: 1vw;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.interaction {
+  width: 35vw;
+  display: flex;
+}
+
+.interaction__logs {
+  font-size: 1.5vw;
+  color: white;
+  background-color: #73aca1;
+  padding: 10px;
+  border: 3px solid #aa2a31;
+  border-left-width: 5px;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  flex: 0 0 55%;
+}
+
+.interaction__moves {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  background-color: #f8f8f8;
+  padding-block: 1vh;
+  padding-inline: 1vw;
+  border: 5px solid #696c80;
+  border-radius: 0.5rem;
+
+  > button {
+    width: 7.5vw;
+    height: 2vw;
+    font-size: 1vw;
+  }
+}
